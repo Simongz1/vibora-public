@@ -18,12 +18,12 @@ cp config.example.json config.local.json   # then edit the MOOSE paths if they d
 python3 scripts/agent_bridge.py
 ```
 
-Open http://127.0.0.1:18080, pick a model under **LLM model**, build a graph (or **Load diffusion example**) and press **Implement & generate**.
+Open http://127.0.0.1:18080, pick a model under **LLM model**, build a graph (or **Open** one, such as a graph you saved earlier) and press **Implement & generate**.
 
 To keep MOOSE on a cluster and the GUI on your laptop, see [Remote MOOSE host](docs/SETUP.md#5-run-vibora).
 
 ## Build a model
-- Use category shortcuts for Materials, ICs, BCs, Postprocessors, Kernels, AuxVariables and AuxKernels.
+- The library holds general blocks (MOOSE component, Mesh, Solver, Results) and category shortcuts for Variables, Materials, ICs, BCs, Kernels, AuxVariables, AuxKernels and Postprocessors. The canvas starts empty.
 - **Add MOOSE object** accepts any category, an optional registered object type, and physics/method descriptions. Other categories include Functions, UserObjects, Constraints, MultiApps and Transfers. Category suggestions are editable, not an allowlist.
 - Newly added blocks are selected and scrolled into view; the canvas expands with the graph.
 - Zoom with **− / 100% / +** above the canvas, Ctrl/⌘ + scroll or a trackpad pinch (around the pointer), from 10% to 200%. **Fit** shows every block; opening a saved graph that does not fit zooms out automatically. Zoom only changes the display, not block coordinates.
