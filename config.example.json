@@ -1,0 +1,32 @@
+{
+  "moose_dir": "~/projects/moose",
+  "moose_executable": "~/projects/moose/modules/combined/combined-opt",
+  "application_description": "MOOSE framework and all physics modules (combined application)",
+  "base_app": {
+    "class": "",
+    "dir": "",
+    "library": ""
+  },
+  "toolchain_bin": [],
+  "scheduler": {
+    "enabled": false,
+    "account": "",
+    "partition": "",
+    "qos": "",
+    "memory": "8G",
+    "gpus": 0,
+    "extra_args": [],
+    "time": "00:20:00",
+    "cpus": 2,
+    "run_ranks": 2,
+    "run_time": "00:30:00"
+  },
+  "local_runs": {
+    "max_ranks": 4,
+    "max_time": "01:00:00",
+    "default_time": "00:10:00"
+  },
+  "render_conda_env": "moose",
+  "render_conda_prefix": "",
+  "render_python": ""
+}
