@@ -68,3 +68,10 @@ After a run, `scripts/render_results.py` saves PNG snapshots of up to 4 times in
 - `tests/`: backend, workflow, image and git-sync tests (`ctest --test-dir build`); `submit_build_fixture.py` builds an isolated analytic Poisson fixture without retaining it.
 
 The deterministic graph checker checks graph structure; it is not a general proof of physical consistency or dimensional correctness. Cyclic physical coupling is allowed. The legacy `/api/generate`, `/api/validate` and `--generate` remain diffusion-specific; the GUI uses `/api/jobs/*` and `/api/graph/check` for general models. MOOSE itself is not vendored. CMake downloads checksum-pinned cpp-httplib and nlohmann/json headers; their licenses are in `third_party/`.
+
+## License
+VIBORA is released under the [MIT License](LICENSE), copyright (c) 2026 Simon Gonzalez. Exceptions:
+- `moose_app/include/base/ViboraPhysicsApp.h` and `moose_app/Makefile` are adapted from MOOSE's application template and remain under MOOSE's [LGPL-2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) license.
+- The downloaded headers in `third_party/` (cpp-httplib, nlohmann/json) are MIT-licensed by their authors; see `third_party/*.LICENSE`.
+
+VIBORA links against MOOSE, which is licensed separately under LGPL-2.1 and is not included in this repository.
